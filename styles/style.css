@@ -1,0 +1,113 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right,#1d2c1c,#8dab8d);
+    color:white;
+}
+
+.container{
+    display:grid;
+
+    grid-template-columns:200px 1fr;
+
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+
+    min-height:100vh;
+}
+
+header{
+    grid-area:header;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:20px;
+    background:#001100;
+}
+
+header img{
+    width:60px;
+}
+
+aside{
+    grid-area:aside;
+    background:#002200;
+}
+
+nav ul{
+    list-style:none;
+    padding:0;
+}
+
+nav li{
+    margin:10px;
+}
+
+nav a{
+    display:block;
+    padding:10px;
+    background:#116611;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+nav a:hover{
+    background:#006600;
+}
+
+main{
+    grid-area:main;
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+}
+
+section{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.card-container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:rgb(245, 255, 245);
+    color:black;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,155,0,0.5);
+    flex:1;
+    min-width:200px;
+}
+
+franklin img{
+    width: 300px;
+    border-radius:10px
+}
+franklin img:hover {
+    transform: rotate(5deg);
+    scale: 1.2;
+    transition: scale 1s;
+}
+
+iframe{
+    max-width:100%;
+}
+
+footer{
+    grid-area:footer;
+    text-align:center;
+    padding:10px;
+    background:rgb(0, 17, 0);
+}
